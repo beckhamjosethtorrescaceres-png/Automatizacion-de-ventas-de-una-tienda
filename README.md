@@ -1,13 +1,13 @@
-# Automatizaci-n-de-ventas-de-una-tienda
-# Daily Sales Register
+# Store Sales Automation
+# Daily Sales Log
 
 ## Description
-This project is a Python script designed to help a small store register daily sales and generate a summary report.
+This project is a Python script designed to help a small store record daily sales and generate a summary report.
 
 The system allows the user to:
-- Register multiple sales during the execution
-- Store product name, price, and quantity
-- Calculate totals automatically
+- Record multiple sales during execution
+- Store the product name, price, and quantity
+- Automatically calculate totals
 - Generate a final report of products sold and total revenue
 
 ## Strategy
@@ -17,11 +17,8 @@ The solution uses a list to store sales data. Each sale is represented as a dict
 The program is divided into functions:
 
 - register_sale() → captures user input
-- calculate_summary() → processes sales data
-- print_summary() → prints the final report
+- calculate_totals() → processes sales data and displays a summary of the day's sales
 - main() → controls program execution
-
-The script also imports the `datetime` module to display when the report was generated.
 
 ## Technologies
 - Python

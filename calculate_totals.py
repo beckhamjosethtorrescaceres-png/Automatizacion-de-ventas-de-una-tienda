@@ -23,16 +23,16 @@ def calculate_summary(sales):
     return product_summary, total_revenue
 
 
-# Function to print final report
+# Function to print report
 def print_summary(product_summary, total_revenue):
 
-    print("\nRESUMEN DE VENTAS DEL DÍA")
+    print("\nDAILY SALES SUMMARY")
     print("-------------------------")
 
     for product, data in product_summary.items():
 
-        print(f"Producto: {product}")
-        print(f"Precio unitario: ${data['price']}")
-        print(f"Cantidad total vendida: {data['quantity']}\n")
+        print(f"Product: {product}")
+        print(f"Unit Price: ${data['price']}")
+        print(f"Total Quantity Sold: {data['quantity']}\n")
 
-    print(f"Total recaudado: ${total_revenue}")
+    print(f"Total Revenue: ${total_revenue}")

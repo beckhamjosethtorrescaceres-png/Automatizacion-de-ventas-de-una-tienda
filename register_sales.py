@@ -1,33 +1,33 @@
 def register_sale():
-    print("\nRegistro de venta")
+    print("\nSale Registration")
 
-    product = input("Ingrese el nombre del producto: ").strip()
+    product = input("Enter the product name: ").strip()
 
-    # Validación del precio
-    validando_precio = True
-    while validando_precio:
-        price_input = input("Ingrese el precio unitario: ")
+    # Price validation
+    validating_price = True
+    while validating_price:
+        price_input = input("Enter the unit price: ")
         try:
             price = float(price_input)
             if price > 0:
-                validando_precio = False  
+                validating_price = False
             else:
-                print(" El precio debe ser mayor a 0.")
+                print(" The price must be greater than 0.")
         except ValueError:
-            print(" Debe ingresar un número válido para el precio.")
+            print(" You must enter a valid number for the price.")
 
-    # Validación de la cantidad
-    validando_cantidad = True
-    while validando_cantidad:
-        quantity_input = input("Ingrese la cantidad vendida: ")
+    # Quantity validation
+    validating_quantity = True
+    while validating_quantity:
+        quantity_input = input("Enter the quantity sold: ")
         try:
             quantity = int(quantity_input)
             if quantity > 0:
-                validando_cantidad = False 
+                validating_quantity = False
             else:
-                print(" La cantidad debe ser mayor a 0.")
+                print(" The quantity must be greater than 0.")
         except ValueError:
-            print(" Debe ingresar un número entero válido para la cantidad.")
+            print(" You must enter a valid integer for the quantity.")
 
     total = price * quantity
 

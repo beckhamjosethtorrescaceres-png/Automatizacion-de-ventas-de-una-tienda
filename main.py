@@ -4,14 +4,14 @@ from calculate_totals import calculate_summary, print_summary
 def main():
 
     sales = []
-    option = "si"
+    option = "yes"
 
-    while option == "si":
+    while option == "yes":
 
         sale = register_sale()
         sales.append(sale)
 
-        option = input("¿Desea registrar otra venta? (si/no): ").lower()
+        option = input("Do you want to register another sale? (yes/no) : ").lower()
 
     product_summary, total_revenue = calculate_summary(sales)
 
