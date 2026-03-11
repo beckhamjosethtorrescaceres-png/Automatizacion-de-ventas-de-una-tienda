@@ -1,8 +1,14 @@
 def register_sale():
     print("\nSale Registration")
+    
 
-    product = input("Enter the product name: ").strip()
-
+      # Validación del producto
+    while True:
+        product = input("Enter the product name: ").strip()
+        if product:
+            break
+        else:
+            print("El nombre del producto no puede estar vacío.")
     # Price validation
     validating_price = True
     while validating_price:

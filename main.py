@@ -1,21 +1,17 @@
 from register_sales import register_sale
 from calculate_totals import calculate_summary, print_summary
+from ask_another_sale import ask_another_sale
 
-def main():
+sales = []
 
-    sales = []
-    option = "yes"
+another_sale = True
 
-    while option == "yes":
+while another_sale == True:
+    sale = register_sale()
+    sales.append(sale)
 
-        sale = register_sale()
-        sales.append(sale)
+    another_sale = ask_another_sale()
 
-        option = input("Do you want to register another sale? (yes/no) : ").lower()
+product_summary, total_revenue = calculate_summary(sales)
 
-    product_summary, total_revenue = calculate_summary(sales)
-
-    print_summary(product_summary, total_revenue)
-
-
-main()
+print_summary(product_summary, total_revenue)
